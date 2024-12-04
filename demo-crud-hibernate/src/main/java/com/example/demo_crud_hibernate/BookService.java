@@ -25,8 +25,8 @@ public class BookService {
     }
 
     // Retrieve a book by ID
-    public Optional<Book> getBookById(Long id) {
-        return bookRepository.findById(id);
+    public Optional<Book> getBookById(int id) {
+        return bookRepository.findById((long) id);
     }
 
     // Update a book

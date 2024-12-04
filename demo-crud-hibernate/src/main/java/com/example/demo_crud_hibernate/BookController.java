@@ -25,7 +25,7 @@ public class BookController {
     }
 
     @GetMapping("/{id}")
-    public Book getBookById(@PathVariable Long id) {
+    public Book getBookById(@PathVariable int id) {
         return bookService.getBookById(id)
                 .orElseThrow(() -> new RuntimeException("Book not found"));
     }
